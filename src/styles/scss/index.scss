@@ -1,3 +1,90 @@
+$font-stack: Raleway, sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  &:focus {
+    outline: none;
+  }
+}
+
 body {
-  font-family: 'Raleway', sans-serif;  
+  font-family: $font-stack;
+}
+
+#root {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#quote-box {
+  width: 600px;
+  background-color: #ffffff;
+  display: grid;
+  grid-template-column: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+  grid-template-areas:
+    "quote quote"
+    ". author"
+    "social newQuote";
+
+  .quote {
+    grid-area: quote;
+    justify-self: center;
+    margin: 3em 3em 1em 3em;
+    height: auto;
+
+    #text {
+      font-size: 28px;
+      font-weight: 500;
+      text-align: center;
+
+      .fa-quote-left {
+        margin-right: 7px;
+      }
+    }
+  }
+
+  #author {
+    grid-area: author;
+    justify-self: end;
+    text-align: right;
+    margin: 0 3em 2em 3em;
+  }
+
+  .button {
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    padding: 8px 10px;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .social-media {
+    grid-area: social;
+    justify-self: start;
+    margin: 0 0 3em 3em;
+
+    #tumblr-quote {
+      margin-left: 5px;
+    }
+  }
+
+  #new-quote {
+    grid-area: newQuote;
+    justify-self: end;
+    margin: 0 3em 3em 0;
+    cursor: pointer;
+    font-family: $font-stack;
+    font-weight: 500;
+    padding: 10px;
+  }
 }

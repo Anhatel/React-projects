@@ -13,9 +13,11 @@ function QuoteBox({ quote, author, handleNewQuote }) {
         <Text quote={quote} />
       </blockquote>
       <Author author={author} />
-      <NewQuote handleNewQuote={handleNewQuote} />
-      <TwitterQuote />
-      <TumblrQuote />
+      <div className="social-media">
+        <TwitterQuote quote={quote} author={author} />
+        <TumblrQuote quote={quote} author={author} />
+      </div>
+      <NewQuote />
     </div>
   );
 }
@@ -23,7 +25,6 @@ function QuoteBox({ quote, author, handleNewQuote }) {
 QuoteBox.propTypes = {
   quote: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
-  handleNewQuote: PropTypes.func.isRequired,
 };
 
 export default QuoteBox;

@@ -1,11 +1,11 @@
 import React from 'react';
 
-function NewQuote({ handleNewQuote }) {
+function NewQuote() {
   return (
     <button
       id="new-quote"
+      className="button"
       value="new-quote"
-      onClick={handleNewQuote}
       >New quote
     </button>
   );
