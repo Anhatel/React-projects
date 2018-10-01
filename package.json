@@ -2,7 +2,7 @@
   "name": "random-quote-machine2",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://Anhatel.github.io/random-quote-machine",
+  "homepage": "http://anhatel.github.io/random-quote-machine",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.4",
     "@fortawesome/free-brands-svg-icons": "^5.3.1",
