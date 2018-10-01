@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import ReactDOMServer from 'react-dom/server';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { fab } from '@fortawesome/free-brands-svg-icons';
+import { faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faTumblr } from '@fortawesome/free-brands-svg-icons';
 import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons';
 import QuoteBox from './QuoteBox';
 
-library.add(fab, faQuoteLeft);
+library.add(faTwitter, faTumblr, faQuoteLeft);
 
 class App extends Component {
   constructor(props) {
